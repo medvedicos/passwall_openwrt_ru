@@ -150,7 +150,7 @@ echo -e "${GREEN} dnsmaq-full установлен успешно ! ${NC}"
 
  else
            
-echo -e "${RED} Пакет: dnsmasq-full Не установлен ! (Плохое соединение с интернетом .) ${NC}"
+echo -e "${RED} Пакет: dnsmasq-full не установлен ! (Плохое соединение с интернетом .) ${NC}"
 
 exit 1
 
@@ -176,7 +176,7 @@ then
 
 else
 
-  echo "Stage 1 Passed"
+  echo "Этап 1 завершен"
 fi
 
 wget https://raw.githubusercontent.com/amirhosseinchoghaei/iran-iplist/main/direct_ip
@@ -191,7 +191,7 @@ then
 
 else
 
-  echo "Stage 2 Passed"
+  echo "Этап 2 завершен"
 
 fi
 
@@ -203,7 +203,7 @@ RESULT=`ls direct_ip`
 
  else
 
-            echo -e "${RED}INTERNET CONNECTION ERROR!! Try Again ${NC}"
+            echo -e "${RED}Ошибка соединения с интернетом!! Попробуйте позже ${NC}"
 
 
 
@@ -220,7 +220,7 @@ echo -e "${GREEN} Xray OK ! ${NC}"
 
  else
 
-echo -e "${YELLOW} Installing Xray On Temp Space ! ${NC}"
+echo -e "${YELLOW} Установка Xray во временное хоанилище (tmp) ! ${NC}"
            
 rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 
