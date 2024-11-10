@@ -12,7 +12,7 @@ echo "Запуск от имени root..."
 sleep 2
 clear
 
-uci set system.@system[0].zonename='Asia/Tehran'
+uci set system.@system[0].zonename='Europe/Moscow'
 
 uci set system.@system[0].timezone='<+0300>-3:00'
 
