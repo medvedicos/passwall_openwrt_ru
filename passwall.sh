@@ -8,11 +8,11 @@ CYAN='\033[0;36m'
 GRAY='\033[0;37m'
 NC='\033[0m' # No Color
 
-echo "Running as root..."
+echo "Запуск от пользователя root..."
 sleep 2
 clear
 
-uci set system.@system[0].zonename='Asia/Tehran'
+uci set system.@system[0].zonename='Europe/Moscow'
 
 uci set network.wan.peerdns="0"
 
@@ -22,7 +22,7 @@ uci set network.wan.dns='1.1.1.1'
 
 uci set network.wan6.dns='2001:4860:4860::8888'
 
-uci set system.@system[0].timezone='<+0330>-3:30'
+uci set system.@system[0].timezone='<+0300>-3:00'
 
 uci commit system
 
@@ -37,7 +37,7 @@ SNNAP=`grep -o SNAPSHOT /etc/openwrt_release | sed -n '1p'`
 
 if [ "$SNNAP" == "SNAPSHOT" ]; then
 
-echo -e "${YELLOW} SNAPSHOT Version Detected ! ${NC}"
+echo -e "${YELLOW} Предварительная версия активирована ! ${NC}"
 
 rm -f passwalls.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
 
@@ -45,7 +45,7 @@ exit 1
 
  else
            
-echo -e "${GREEN} Updating Packages ... ${NC}"
+echo -e "${GREEN} Обновление пакетов ... ${NC}"
 
 fi
 
@@ -110,7 +110,6 @@ echo "    ___    __  ___________  __  ______  __________ ___________   __
   / /| | / /|_/ // // /_/ / /_/ / / / /\__ \\__ \ / __/  / //  |/ /
  / ___ |/ /  / // // _  _/ __  / /_/ /___/ /__/ / /____/ // /|  /
 /_/  |_/_/  /_/___/_/ |_/_/ /_/\____//____/____/_____/___/_/ |_/                                                                                                
-telegram : @AmirHosseinTSL" >> /etc/banner
 
 sleep 1
 
@@ -133,11 +132,11 @@ RESULT=`ls /etc/init.d/passwall`
 
 if [ "$RESULT" == "/etc/init.d/passwall" ]; then
 
-echo -e "${GREEN} Passwall Installed successfully ! ${NC}"
+echo -e "${GREEN} Passwall успешно установлен ! ${NC}"
 
  else
            
-echo -e "${RED} Can not Download Packages ... Check your internet Connection . ${NC}"
+echo -e "${RED} Не удалось скачать пакеты ... Проверьте свое интернет соединение . ${NC}"
 
 exit 1
 
@@ -147,11 +146,11 @@ DNS=`ls /usr/lib/opkg/info/dnsmasq-full.control`
 
 if [ "$DNS" == "/usr/lib/opkg/info/dnsmasq-full.control" ]; then
 
-echo -e "${GREEN} dnsmaq-full Installed successfully ! ${NC}"
+echo -e "${GREEN} dnsmaq-full установлен успешно ! ${NC}"
 
  else
            
-echo -e "${RED} Package : dnsmasq-full not installed ! (Bad internet connection .) ${NC}"
+echo -e "${RED} Пакет: dnsmasq-full Не установлен ! (Плохое соединение с интернетом .) ${NC}"
 
 exit 1
 
@@ -259,8 +258,8 @@ my.irancell.ir'
 
 uci commit
 
-echo -e "${YELLOW}** Installation Completed ** ${ENDCOLOR}"
-echo -e "${MAGENTA} Made With Love By : AmirHossein ${ENDCOLOR}"
+echo -e "${YELLOW}** Установка завершена ** ${ENDCOLOR}"
+echo -e "${MAGENTA} Сделано с любовью : Mizuvil ${ENDCOLOR}"
 
 
 rm passwallx.sh 2> /dev/null
