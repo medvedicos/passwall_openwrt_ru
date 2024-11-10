@@ -22,7 +22,7 @@ uci commit
 
 cp passwallx.sh /sbin/passwall
 
-##Scanning
+##Сканирование
 
 . /etc/openwrt_release
 
