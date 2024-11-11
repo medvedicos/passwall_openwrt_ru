@@ -150,7 +150,7 @@ echo -e "${GREEN} dnsmaq-full установлен успешно! ${NC}"
 
  else
            
-echo -e "${RED} Пакет: dnsmasq-full не установлен! ( Плохое соединение с интернетом . ) ${NC}"
+echo -e "${RED} Пакет: dnsmasq-full не установлен! Проверьте интернет соединение. ${NC}"
 
 exit 1
 
