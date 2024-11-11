@@ -203,7 +203,7 @@ RESULT=`ls direct_ip`
 
  else
 
-            echo -e "${RED}Ошибка соединения с интернетом!! Попробуйте позже ${NC}"
+            echo -e "${RED}Ошибка соединения с интернетом! Попробуйте позже ${NC}"
 
 
 
@@ -216,11 +216,11 @@ RESULT=`ls /usr/bin/xray`
 
 if [ "$RESULT" == "/usr/bin/xray" ]; then
 
-echo -e "${GREEN} Xray OK ! ${NC}"
+echo -e "${GREEN} Xray OK! ${NC}"
 
  else
 
-echo -e "${YELLOW} Установка Xray во временное хоанилище (tmp) ! ${NC}"
+echo -e "${YELLOW} Установка Xray во временное хранилище ! ${NC}"
            
 rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 
