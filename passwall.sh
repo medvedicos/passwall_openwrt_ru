@@ -146,11 +146,11 @@ DNS=`ls /usr/lib/opkg/info/dnsmasq-full.control`
 
 if [ "$DNS" == "/usr/lib/opkg/info/dnsmasq-full.control" ]; then
 
-echo -e "${GREEN} dnsmaq-full установлен успешно ! ${NC}"
+echo -e "${GREEN} dnsmaq-full установлен успешно! ${NC}"
 
  else
            
-echo -e "${RED} Пакет: dnsmasq-full не установлен ! (Плохое соединение с интернетом .) ${NC}"
+echo -e "${RED} Пакет: dnsmasq-full не установлен! ( Плохое соединение с интернетом . ) ${NC}"
 
 exit 1
 
