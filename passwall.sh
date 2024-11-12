@@ -65,7 +65,7 @@ read release arch << EOF
 $(. /etc/openwrt_release ; echo ${DISTRIB_RELEASE%.*} $DISTRIB_ARCH)
 EOF
 for feed in passwall_luci passwall_packages passwall2; do
-  echo "src/gz $feed https://sourceforge.net/projects/openwrt-passwall-build/files/releases/packages-$release/$arch/$feed" >> /etc/opkg/customfeeds.conf
+  echo "src/gz $feed https://sourceforge.net/projects/openwrt-passwall-build/files/releases/packages-$release/$arch/$feed/download" >> /etc/opkg/customfeeds.conf
 done
 
 ### Install package ###
