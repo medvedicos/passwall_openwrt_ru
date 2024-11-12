@@ -55,7 +55,7 @@ opkg update
 
 ### Add Src ###
 
-wget -O passwall.pub https://sourceforge.net/projects/openwrt-passwall-build/files/passwall.pub
+wget -O passwall.pub https://sourceforge.net/projects/openwrt-passwall-build/files/passwall.pub/download
 
 opkg-key add passwall.pub
 
