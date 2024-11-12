@@ -55,11 +55,11 @@ opkg update
 
 ### Add Src ###
 
-wget -O passwall.pub https://sourceforge.net/projects/openwrt-passwall-build/files/passwall.pub/download
+#wget -O passwall.pub https://sourceforge.net/projects/openwrt-passwall-build/files/passwall.pub
 
-opkg-key add passwall.pub
+#opkg-key add passwall.pub
 
->/etc/opkg/customfeeds.conf
+#>/etc/opkg/customfeeds.conf
 
 read release arch << EOF
 $(. /etc/openwrt_release ; echo ${DISTRIB_RELEASE%.*} $DISTRIB_ARCH)
